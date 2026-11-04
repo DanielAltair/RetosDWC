@@ -16,3 +16,7 @@ En `src/reto1.ts` hay un usuario válido y un ejemplo comentado con un rol no pe
 ## Reto 4: Control de errores
 
 `RespuestaServidor` distingue las respuestas exitosas de las respuestas con error mediante `status`. `procesarRespuesta` recorre `data` solo si existe y muestra `mensajeError` cuando está disponible.
+
+## Reto 5: Herencia y super()
+
+`ServicioUsuarios` extiende `ServicioDatos`. Su constructor pasa `endpoint` a la clase padre con `super(endpoint)` y define `entidad` como `"usuarios"`.
