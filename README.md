@@ -8,3 +8,7 @@ En `src/reto1.ts` hay un usuario válido y un ejemplo comentado con un rol no pe
 ## Reto 2: Inmutabilidad con tareas
 
 `completarTarea` usa `map` para devolver un array nuevo. La tarea indicada se copia con `completada: true`; la lista original no se modifica.
+
+## Reto 3: Clase y encapsulación
+
+`ProductComponent` mantiene privados el precio base y el IVA fijo del 21 %. El nombre se recibe en el constructor y el precio final se obtiene con `obtenerPrecioFinal()`.
