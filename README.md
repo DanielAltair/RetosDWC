@@ -12,3 +12,7 @@ En `src/reto1.ts` hay un usuario válido y un ejemplo comentado con un rol no pe
 ## Reto 3: Clase y encapsulación
 
 `ProductComponent` mantiene privados el precio base y el IVA fijo del 21 %. El nombre se recibe en el constructor y el precio final se obtiene con `obtenerPrecioFinal()`.
+
+## Reto 4: Control de errores
+
+`RespuestaServidor` distingue las respuestas exitosas de las respuestas con error mediante `status`. `procesarRespuesta` recorre `data` solo si existe y muestra `mensajeError` cuando está disponible.
