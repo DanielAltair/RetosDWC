@@ -1,22 +1,75 @@
-# Reto 1: Contrato de la API
+# Retos de TypeScript
 
-La interfaz `UsuarioAPI` define los datos que debe tener un usuario recibido de la API.
-El campo `rol` solo permite `admin`, `editor` o `alumno`, y `token` es opcional.
+Proyecto de práctica con cinco retos de TypeScript: modelado de datos, arrays inmutables, clases, control de errores y herencia. El proyecto compila el código localmente y muestra los resultados en una página HTML.
 
-En `src/reto1.ts` hay un usuario válido y un ejemplo comentado con un rol no permitido.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-not%20specified-lightgrey)
 
-## Reto 2: Inmutabilidad con tareas
+## Tabla de contenidos
 
-`completarTarea` usa `map` para devolver un array nuevo. La tarea indicada se copia con `completada: true`; la lista original no se modifica.
+- [Características](#características)
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Configuración](#configuración)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
 
-## Reto 3: Clase y encapsulación
+## Características
 
-`ProductComponent` mantiene privados el precio base y el IVA fijo del 21 %. El nombre se recibe en el constructor y el precio final se obtiene con `obtenerPrecioFinal()`.
+- Cinco ejercicios de TypeScript en un único archivo: `src/app.ts`.
+- Tipado estricto con interfaces, tipos unión y propiedades privadas.
+- Compilación automática en modo vigilancia con `tsc --watch`.
+- Visualización de los resultados en `src/index.html`, con estilos definidos en `src/styles.css`.
 
-## Reto 4: Control de errores
+## Requisitos
 
-`RespuestaServidor` distingue las respuestas exitosas de las respuestas con error mediante `status`. `procesarRespuesta` recorre `data` solo si existe y muestra `mensajeError` cuando está disponible.
+- Node.js >= 18.0
+- npm >= 9.0
 
-## Reto 5: Herencia y super()
+## Instalación
 
-`ServicioUsuarios` extiende `ServicioDatos`. Su constructor pasa `endpoint` a la clase padre con `super(endpoint)` y define `entidad` como `"usuarios"`.
+Desde la carpeta raíz del proyecto, instala las dependencias:
+
+```bash
+npm install
+```
+
+## Uso
+
+Desde la carpeta raíz, inicia el compilador en modo vigilancia:
+
+```bash
+npx tsc --watch
+```
+
+Mantén esa terminal abierta para que TypeScript vuelva a compilar al guardar cambios en `src/app.ts`. El JavaScript generado se guarda en `dist/app.js`.
+
+Para ver la página, abre `src/index.html` con una extensión de servidor local, como Live Server de Visual Studio Code. La página carga el JavaScript compilado desde `dist/app.js`.
+
+## Configuración
+
+La configuración de TypeScript está en `tsconfig.json`:
+
+| Opción | Descripción | Valor |
+|---|---|---|
+| `rootDir` | Carpeta de los archivos fuente | `./src` |
+| `outDir` | Carpeta del JavaScript compilado | `./dist` |
+| `module` | Formato de módulos para el navegador | `ES2020` |
+| `strict` | Activa la comprobación estricta de tipos | `true` |
+
+No se necesita un archivo `.env` para este proyecto.
+
+## Contribuir
+
+Las mejoras y correcciones son bienvenidas. Para proponer cambios:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu cambio (`git checkout -b feature/nueva-funcionalidad`).
+3. Guarda los cambios en un commit (`git commit -m "Añadir nueva funcionalidad"`).
+4. Sube la rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
+
+## Licencia
+
+El proyecto todavía no especifica una licencia.
