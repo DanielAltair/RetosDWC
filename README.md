@@ -1,3 +1,5 @@
+## Autor: Daniel Izquierdo Cuevas
+
 # Retos de TypeScript
 
 Proyecto de práctica con cinco retos de TypeScript: modelado de datos, arrays inmutables, clases, control de errores y herencia. El proyecto compila el código localmente y muestra los resultados en una página HTML.
